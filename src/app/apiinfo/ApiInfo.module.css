@@ -1,0 +1,52 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom,#ffffff, #22dafa, #ffffff);
+}
+
+.main {
+  max-width: 3xl;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2fb3f0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.text {
+  color: #4b5563;
+  font-size: 1.125rem;
+  margin: 0.75rem 0;
+}
+
+.link {
+  color: #2fb3f0;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #0048e4;
+}
+
+.description {
+  color: #374151;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
