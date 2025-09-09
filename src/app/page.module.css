@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom right, #f1f1f1, #81eaf1, #ffffff); /* from-sky-200 via-sky-300 to-green-200 */
+  background: linear-gradient(to bottom right, #f1f1f1, #a93b03, #ffffff); /* from-sky-200 via-sky-300 to-green-200 */
 }
 
 .main {
@@ -25,12 +25,12 @@
 
 .subtitle {
   font-size: 1.25rem; /* text-xl */
-  color: #0c4a6e; /* text-sky-900 */
+  color: #000000; /* text-sky-900 */
 }
 
 .subtitleSpacing {
   font-size: 1.25rem; 
-  color: #0c4a6e;
+  color: #000000;
   margin-bottom: 2rem; 
 }
 
@@ -48,7 +48,7 @@
   position: absolute;
   inset: 0;
   border-radius: 9999px;
-  background: linear-gradient(to top right, rgba(252, 165, 165, 0.2), rgba(125, 211, 252, 0.2));
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.2), rgba(125, 211, 252, 0.2));
   animation: pulse 2s infinite;
 }
 
@@ -65,7 +65,7 @@
   margin-top: 2.5rem; 
   font-size: 1.5rem; 
   font-style: italic;
-  color: #0c4a6e; 
+  color: #000000; 
  
  
   backdrop-filter: blur(8px); 

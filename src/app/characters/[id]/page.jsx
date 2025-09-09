@@ -1,21 +1,21 @@
 import Header from "@/components/Header";
 import styles from "./page.module.css";
 
-export default async function FilmDetails({ params }) {
+export default async function MusicDetails({ params }) {
   const { id } = params;
 
-  let film = null;
+  let music = null;
 
   try {
-    const res = await fetch(`https://ghibliapi.vercel.app/films/${id}`, { cache: "no-store" });
-    if (!res.ok) throw new Error("Erro ao buscar filme");
-    film = await res.json();
+    const res = await fetch(`http://localhost:5000/musics/${id}`);
+    if (!res.ok) throw new Error("Erro ao buscar música");
+    music = await res.json();
   } catch (error) {
-    console.error("❌ Erro ao carregar filme:", error.message);
+    console.error("❌ Erro ao carregar música:", error.message);
   }
 
-  if (!film) {
-    return <p className={styles.notFound}>⚠️ Filme não encontrado</p>;
+  if (!music) {
+    return <p className={styles.notFound}>⚠️ Música não encontrada</p>;
   }
 
   return (
@@ -23,32 +23,38 @@ export default async function FilmDetails({ params }) {
       <Header />
       <main className={styles.main}>
         <div className={styles.card}>
-          <h1 className={styles.title}>{film.title}</h1>
-          <p className={styles.description}>{film.description}</p>
+         
+          <h1 className={styles.title}>{music.title}</h1>
 
+         
+          <p className={styles.description}>{music.story}</p>
+
+        
           <div className={styles.infoGrid}>
             <div className={styles.infoCard}>
-              <p className={styles.infoLabel}>Diretor</p>
-              <p className={styles.infoValue}>{film.director}</p>
-            </div>
-            <div className={styles.infoCard}>
-              <p className={styles.infoLabel}>Produtor</p>
-              <p className={styles.infoValue}>{film.producer}</p>
-            </div>
-            <div className={styles.infoCard}>
               <p className={styles.infoLabel}>Ano de lançamento</p>
-              <p className={styles.infoValue}>{film.release_date}</p>
+              <p className={styles.infoValue}>{music.releaseYear}</p>
             </div>
             <div className={styles.infoCard}>
               <p className={styles.infoLabel}>Duração</p>
-              <p className={styles.infoValue}>{film.running_time} min</p>
+              <p className={styles.infoValue}>{music.duration}</p>
+            </div>
+            <div className={styles.infoCard}>
+              <p className={styles.infoLabel}>Álbum</p>
+              <p className={styles.infoValue}>#{music.albumId}</p>
             </div>
           </div>
 
-          <div className={styles.tags}>
-            <span className={styles.tagYellow}>Aventura</span>
-            <span className={styles.tagTeal}>Fantasia</span>
-            <span className={styles.tagPink}>Animação</span>
+       
+          <div className={styles.actions}>
+            <a
+              href={music.playbackUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+            >
+              ▶️ Ouvir no Spotify
+            </a>
           </div>
         </div>
       </main>

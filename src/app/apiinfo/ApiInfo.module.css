@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom,#ffffff, #22dafa, #ffffff);
+  background: linear-gradient(to bottom, #f1f1f1, #a93b03, #ffffff);
 }
 
 .main {
@@ -14,7 +14,7 @@
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2fb3f0;
+  color: #8d1e1e;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -35,7 +35,7 @@
 }
 
 .link {
-  color: #2fb3f0;
+  color: #000000;
   text-decoration: underline;
   transition: color 0.3s;
 }

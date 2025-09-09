@@ -27,7 +27,7 @@ export default function Home() {
 
     
         <blockquote className={styles.quote}>
-          “A persistência realiza o impossível.” – Provérbio Chinês
+          As melhores músicas - Lana Del Rey
         </blockquote>
 
       </main>

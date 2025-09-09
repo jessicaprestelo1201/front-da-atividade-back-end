@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(to bottom right, #2fb3f0, #22dafa, #4c8de2);
+  background: linear-gradient(to bottom right, #9c2400, #894900, #9c2400);
   padding: 1rem 2rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   position: sticky;
@@ -43,7 +43,7 @@
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #007cf0;
+  background-color: #ffffff;
   transition: width 0.3s;
 }
 

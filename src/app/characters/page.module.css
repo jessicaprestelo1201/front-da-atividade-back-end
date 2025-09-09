@@ -7,14 +7,14 @@
 .main {
   flex: 1;
   padding: 2.5rem; 
-  background: linear-gradient(to bottom right,#ffffff, #22dafa, #ffffff); 
+  background: linear-gradient(to bottom right #f1f1f1, #a93b03, #ffffff); 
 }
 
 .title {
   font-size: 1.875rem; 
   font-weight: bold;
   text-align: center;
-  color: #4c8de2; 
+  color: #a11313; 
   margin-bottom: 2.5rem; 
 }
 

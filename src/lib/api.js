@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://ghibliapi.vercel.app/films",
+  baseURL: "https://localhost:5000",
 });
 
 export default api;

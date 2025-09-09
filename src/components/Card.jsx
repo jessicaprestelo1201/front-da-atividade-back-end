@@ -1,19 +1,35 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./Card.module.css";
 
-export default function Card({ id, name, image, status }) {
+export default function Card({ id, name, status, description, url }) {
   return (
     <div className={styles.card}>
-     
       <div className={styles.content}>
+       
         <h2 className={styles.name}>{name}</h2>
-        <p className={`${styles.status} ${status === "Alive" ? styles.alive : styles.dead}`}>
-          {status}
-        </p>
-        <Link href={`/characters/${id}`} className={styles.button}>
+
+       
+        <p className={styles.status}>{status}</p>
+
+       
+        {description && <p className={styles.description}>{description}</p>}
+
+       
+        <Link href={`/musics/${id}`} className={styles.button}>
           Detalhes
         </Link>
+
+        
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.button}
+          >
+            ▶️ Ouvir no Spotify
+          </a>
+        )}
       </div>
     </div>
   );
