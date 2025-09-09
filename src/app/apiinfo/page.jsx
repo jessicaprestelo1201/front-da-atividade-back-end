@@ -14,7 +14,7 @@ export default function ApiInfo() {
           <p className={styles.text}>
             <strong>Documentação:</strong>{" "}
             <a 
-              href="http://localhost:5000"
+              href="http://localhost:5000/musics"
               target="_blank" 
               className={styles.link}
             >

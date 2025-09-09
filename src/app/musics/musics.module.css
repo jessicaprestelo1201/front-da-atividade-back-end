@@ -1,0 +1,112 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4b2e2e; /* marrom escuro */
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.musicGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.musicCard {
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(75, 46, 46, 0.15); /* sombra marrom suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f3f0; /* bege claro */
+    border: 1px solid #d2b48c; /* marrom claro/tom areia */
+}
+
+.musicCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(75, 46, 46, 0.25); /* sombra mais forte no hover */
+}
+
+.content {
+    padding: 18px;
+}
+
+.musicTitle {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3b2a26; /* marrom café */
+}
+
+.info {
+    font-size: 14px;
+    color: #6f4e37; /* marrom cappuccino */
+    margin: 5px 0;
+}
+
+.story {
+    font-size: 14px;
+    color: #5c4033; /* marrom médio */
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.album {
+    font-size: 13px;
+    color: #8b5e3c; /* marrom dourado */
+    margin: 5px 0;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 12px;
+    background-color: #8b5e3c; /* marrom caramelo */
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #6f4e37; /* marrom mais escuro */
+    transform: scale(1.05);
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #6f4e37; /* marrom cappuccino */
+}
+
+.error {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #8b0000; /* vermelho escuro */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .musicGrid {
+        justify-content: center;
+    }
+
+    .musicCard {
+        width: 280px;
+    }
+}

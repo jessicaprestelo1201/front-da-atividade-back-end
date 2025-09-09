@@ -11,7 +11,7 @@ export default function Header() {
         <nav className={styles.nav}>
           <Link href="/" className={styles.link}>Home</Link>
           <Link href="/apiinfo" className={styles.link}>API Info</Link>
-          <Link href="/characters" className={styles.link}>Personagens</Link>
+          <Link href="/component" className={styles.link}>Personagens</Link>
         </nav>
       </div>
     </header>
