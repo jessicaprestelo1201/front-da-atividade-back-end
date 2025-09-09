@@ -1,45 +1,81 @@
-import Header from "@/components/Header";
-import Card from "@/components/Card";
+"use client";
+
+import axios from "axios";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+
 import styles from "./page.module.css";
+import Header from "@/components/Header";
 
-export default async function Characters() {
-  let musics = [];
+const MusicList = () => {
+  const url = "http://localhost:5000/musics";
 
-  try {
-    const res = await fetch("http://localhost:5000/musics", { cache: "no-store" });
-    if (!res.ok) throw new Error("Erro ao buscar músicas da API");
+  const [musics, setMusics] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    const data = await res.json();
-    musics = Array.isArray(data) ? data : [];
-  } catch (error) {
-    console.error("❌ Erro ao carregar músicas:", error.message);
+  useEffect(() => {
+    const fetchMusics = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(url);
+        setMusics(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.log("Erro ao buscar músicas na API:", error);
+        setError("Não foi possível carregar as músicas. Tente novamente mais tarde.");
+        setLoading(false);
+      }
+    };
+    fetchMusics();
+  }, []);
+
+  if (loading) {
+    return <div className={styles.loading}>Carregando músicas...</div>;
+  }
+
+  if (error) {
+    return <div className={styles.error}>{error}</div>;
   }
 
   return (
     <div className={styles.container}>
       <Header />
-      <main className={styles.main}>
-        <h2 className={styles.title}>💋 Músicas da Lana Del Rey</h2>
-        {musics.length > 0 ? (
-          <div className={styles.grid}>
-            {musics.map((music) => (
-              <Card
-                key={music.id}
-                id={music.id}
-                name={music.title}            
-                status={`${music.releaseYear} • ${music.duration}`} 
-                image={""}                     
-                description={music.story}      
-                url={music.playbackUrl}       
-              />
-            ))}
+      <h1 className={styles.title}> Músicas da Lana Del Rey</h1>
+      <div className={styles.musicGrid}>
+        {musics.map((music) => (
+          <div key={music.id} className={styles.musicCard}>
+            <div className={styles.content}>
+              <h2 className={styles.musicTitle}>{music.title}</h2>
+
+              <p className={styles.info}>
+                {music.releaseYear} • {music.duration}
+              </p>
+
+              <p className={styles.story}>{music.story}</p>
+
+              <p className={styles.album}>Álbum: #{music.albumId}</p>
+
+              {/* Botão para ouvir */}
+              <a
+                href={music.playbackUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.button}
+              >
+                ▶️ Ouvir no Spotify
+              </a>
+
+              {/* Botão de detalhes */}
+              <Link href={`/musics/${music.id}`} className={styles.detailsButton}>
+                🔎 Ver detalhes
+              </Link>
+            </div>
           </div>
-        ) : (
-          <p className={styles.error}>
-            ⚠️ Não foi possível carregar as músicas. Tente novamente mais tarde.
-          </p>
-        )}
-      </main>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default MusicList;

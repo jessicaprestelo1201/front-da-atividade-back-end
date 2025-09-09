@@ -2,12 +2,15 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
-import styles from "./musicList.module.css";
+import styles from "./musics.module.css";
+import Header from "@/components/Header";
 
 const MusicList = () => {
   const url = "http://localhost:5000/musics";
 
+  
   const [musics, setMusics] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,26 +41,23 @@ const MusicList = () => {
 
   return (
     <div className={styles.container}>
+      <Header />
       <h1 className={styles.title}>🎶 Músicas da Lana Del Rey</h1>
       <div className={styles.musicGrid}>
         {musics.map((music) => (
           <div key={music.id} className={styles.musicCard}>
             <div className={styles.content}>
-             
               <h2 className={styles.musicTitle}>{music.title}</h2>
 
-             
               <p className={styles.info}>
                 {music.releaseYear} • {music.duration}
               </p>
 
-           
               <p className={styles.story}>{music.story}</p>
 
-           
               <p className={styles.album}>Álbum: #{music.albumId}</p>
 
-             
+              {/* Botão para ouvir */}
               <a
                 href={music.playbackUrl}
                 target="_blank"
@@ -66,6 +66,11 @@ const MusicList = () => {
               >
                 ▶️ Ouvir no Spotify
               </a>
+
+              {/* Botão de detalhes */}
+              <Link href={`/musics/${music.id}`} className={styles.detailsButton}>
+                🔎 Ver detalhes
+              </Link>
             </div>
           </div>
         ))}
