@@ -12,6 +12,8 @@ export default function Header() {
           <Link href="/" className={styles.link}>Home</Link>
           <Link href="/apiinfo" className={styles.link}>API Info</Link>
           <Link href="/characters" className={styles.link}>Músicas</Link>
+          <Link href="/aboutme" className={styles.link}>Sobre mim</Link>
+          <Link href="/favorites" className={styles.link}>Favoritos</Link>
         </nav>
       </div>
     </header>

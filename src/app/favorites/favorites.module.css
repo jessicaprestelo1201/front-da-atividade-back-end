@@ -1,0 +1,98 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #a93b03, #f1f1f1, #a93b03); 
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.musicGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.musicCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.musicCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.musicTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: #222;
+}
+
+.info {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.6rem;
+}
+
+.album {
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  font-style: italic;
+  color: #555;
+}
+
+.story {
+  font-size: 0.95rem;
+  margin: 0.6rem 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background-color: #1db954;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #169c46;
+}
+
+.removeButton {
+  margin-top: 0.8rem;
+  background-color: #a93b03;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.removeButton:hover {
+  background-color: #e63950;
+}
+
+.emptyMessage {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 2rem;
+}

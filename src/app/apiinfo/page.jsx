@@ -7,7 +7,7 @@ export default function ApiInfo() {
     <div className={styles.container}>
       <Header />
       <main className={styles.main}>
-        <h2 className={styles.title}>🖼️ Informações da API</h2>
+        <h2 className={styles.title}>💋🎟 Informações da API</h2>
 
         <div className={styles.card}>
           <p><strong>Nome da API:</strong> Studio Ghibli</p>

@@ -1,0 +1,55 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #a93b03, #f1f1f1, #a93b03); 
+}
+
+.main {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.avatarWrapper {
+  margin: 1.5rem 0;
+}
+
+.avatar {
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.name {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: #444;
+}
+
+.text {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.subtitle {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.list {
+  margin-top: 1rem;
+  text-align: left;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}

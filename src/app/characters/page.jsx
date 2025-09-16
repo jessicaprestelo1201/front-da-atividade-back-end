@@ -13,7 +13,9 @@ const MusicList = () => {
   const [musics, setMusics] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
+  // Buscar músicas da API
   useEffect(() => {
     const fetchMusics = async () => {
       try {
@@ -30,6 +32,25 @@ const MusicList = () => {
     fetchMusics();
   }, []);
 
+  // Carregar favoritos do localStorage
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(storedFavorites);
+  }, []);
+
+  // Função para favoritar/remover
+  const toggleFavorite = (id) => {
+    let updatedFavorites;
+    if (favorites.includes(id)) {
+      updatedFavorites = favorites.filter((favId) => favId !== id);
+    } else {
+      updatedFavorites = [...favorites, id];
+    }
+
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+  };
+
   if (loading) {
     return <div className={styles.loading}>Carregando músicas...</div>;
   }
@@ -41,7 +62,7 @@ const MusicList = () => {
   return (
     <div className={styles.container}>
       <Header />
-      <h1 className={styles.title}> Músicas da Lana Del Rey</h1>
+      <h1 className={styles.title}>Músicas da Lana Del Rey</h1>
       <div className={styles.musicGrid}>
         {musics.map((music) => (
           <div key={music.id} className={styles.musicCard}>
@@ -70,6 +91,14 @@ const MusicList = () => {
               <Link href={`/musics/${music.id}`} className={styles.detailsButton}>
                 🔎 Ver detalhes
               </Link>
+
+              {/* Botão de favoritar */}
+              <button
+                onClick={() => toggleFavorite(music.id)}
+                className={styles.favoriteButton}
+              >
+                {favorites.includes(music.id) ? "💔 Remover dos Favoritos" : "❤️ Adicionar aos Favoritos"}
+              </button>
             </div>
           </div>
         ))}

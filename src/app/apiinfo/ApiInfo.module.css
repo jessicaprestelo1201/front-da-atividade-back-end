@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #f1f1f1, #a93b03, #ffffff);
+  background: linear-gradient(to bottom, #f1f1f1, #ffffff, #ffffff);
 }
 
 .main {
