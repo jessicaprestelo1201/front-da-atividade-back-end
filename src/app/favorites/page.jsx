@@ -5,9 +5,13 @@ import styles from "./favorites.module.css";
 import Header from "@/components/Header";
 
 const allMusics = [
-  { id: 1, title: "Video Games", artist: "Lana Del Rey" },
-  { id: 2, title: "Summertime Sadness", artist: "Lana Del Rey" },
-  { id: 3, title: "West Coast", artist: "Lana Del Rey" },
+  { id: 5, title: "Summertime Sadness", artist: "Lana Del Rey" },
+  { id: 6, title: "West Coast", artist: "Lana Del Rey" },
+  { id: 7, title: "Young and Beautiful", artist: "Lana Del Rey" },
+  { id: 8, title: "Blue Jeans", artist: "Lana Del Rey" },
+  { id: 9, title: "Video Games", artist: "Lana Del Rey" },
+{ id: 10, title: "Ride", artist: "Lana Del Rey" },
+  
 ];
 
 export default function Favoritos() {
