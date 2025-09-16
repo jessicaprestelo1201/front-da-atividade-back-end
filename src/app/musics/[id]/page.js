@@ -1,15 +1,45 @@
 import Link from "next/link";
 import styles from "./details.module.css";
 
+
+const allMusics = [
+  {
+    id: "1",
+    name: "Video Games",
+    artist: "Lana Del Rey",
+    year: 2011,
+    duration: "4:42",
+  },
+  {
+    id: "2",
+    name: "Summertime Sadness",
+    artist: "Lana Del Rey",
+    year: 2012,
+    duration: "4:25",
+  },
+  {
+    id: "3",
+    name: "West Coast",
+    artist: "Lana Del Rey",
+    year: 2014,
+    duration: "4:16",
+  },
+];
+
 export default function MusicDetails({ params }) {
-  // Aqui futuramente você pode buscar a música pelo ID
-  const music = {
-    id: params.id,
-    name: "Song Example",
-    artist: "Artist Name",
-    year: 2021,
-    duration: "3:45",
-  };
+ 
+  const music = allMusics.find((m) => m.id === params.id);
+
+  if (!music) {
+    return (
+      <div className={styles.container}>
+        <h1 className={styles.title}>Música não encontrada ❌</h1>
+        <Link href="/musics" className={styles.backButton}>
+          ⬅ Voltar para lista
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.container}>

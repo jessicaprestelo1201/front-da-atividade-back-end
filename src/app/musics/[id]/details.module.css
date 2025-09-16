@@ -2,7 +2,7 @@
     max-width: 800px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #fdf6f0; /* bege claro */
+    background-color: #fdf6f0; 
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
@@ -12,7 +12,7 @@
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #5c4033; /* marrom forte */
+    color: #5c4033; 
   }
   
   .info {
@@ -23,7 +23,7 @@
   
   .label {
     font-weight: bold;
-    color: #8b5e3c; /* marrom médio */
+    color: #8b5e3c; 
   }
   
   .backButton {

@@ -57,7 +57,7 @@ const MusicList = () => {
 
               <p className={styles.album}>Álbum: #{music.albumId}</p>
 
-              {/* Botão para ouvir */}
+            
               <a
                 href={music.playbackUrl}
                 target="_blank"
@@ -67,7 +67,7 @@ const MusicList = () => {
                 ▶️ Ouvir no Spotify
               </a>
 
-              {/* Botão de detalhes */}
+            
               <Link href={`/musics/${music.id}`} className={styles.detailsButton}>
                 🔎 Ver detalhes
               </Link>
