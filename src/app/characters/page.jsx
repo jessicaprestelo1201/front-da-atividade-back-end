@@ -15,7 +15,7 @@ const MusicList = () => {
   const [error, setError] = useState(null);
   const [favorites, setFavorites] = useState([]);
 
-  // Buscar músicas da API
+  
   useEffect(() => {
     const fetchMusics = async () => {
       try {
@@ -32,13 +32,13 @@ const MusicList = () => {
     fetchMusics();
   }, []);
 
-  // Carregar favoritos do localStorage
+ 
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setFavorites(storedFavorites);
   }, []);
 
-  // Função para favoritar/remover
+  
   const toggleFavorite = (id) => {
     let updatedFavorites;
     if (favorites.includes(id)) {
@@ -77,7 +77,7 @@ const MusicList = () => {
 
               <p className={styles.album}>Álbum: #{music.albumId}</p>
 
-              {/* Botão para ouvir */}
+             
               <a
                 href={music.playbackUrl}
                 target="_blank"
@@ -87,12 +87,12 @@ const MusicList = () => {
                 ▶️ Ouvir no Spotify
               </a>
 
-              {/* Botão de detalhes */}
+             
               <Link href={`/musics/${music.id}`} className={styles.detailsButton}>
                 🔎 Ver detalhes
               </Link>
 
-              {/* Botão de favoritar */}
+             
               <button
                 onClick={() => toggleFavorite(music.id)}
                 className={styles.favoriteButton}

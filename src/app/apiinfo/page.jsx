@@ -28,7 +28,7 @@ export default function ApiInfo() {
             Essa API disponibiliza informações sobre os personagens, episódios e locais dos desenhos do Studio Ghibli.
           </p>
 
-          {/* Botão para ir aos detalhes da música */}
+          
           <Link href="/musics/details">
             <button className={styles.button}>
               🎵 Ver detalhes da música
