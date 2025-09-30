@@ -14,7 +14,7 @@ export default function Header() {
           <Link href="/characters" className={styles.link}>Músicas</Link>
           <Link href="/aboutme" className={styles.link}>Sobre mim</Link>
           <Link href="/favorites" className={styles.link}>Favoritos</Link>
-          <Link href="/discography" className={styles.link}>Discografia</Link>
+          
         </nav>
       </div>
     </header>
