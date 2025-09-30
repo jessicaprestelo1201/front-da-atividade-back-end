@@ -41,7 +41,7 @@ export default async function MusicDetails({ params }) {
             </div>
             <div className={styles.infoCard}>
               <p className={styles.infoLabel}>Álbum</p>
-              <p className={styles.infoValue}>#{music.albumId}</p>
+              <p className={styles.infoValue}>{music.albumId}</p>
             </div>
           </div>
 

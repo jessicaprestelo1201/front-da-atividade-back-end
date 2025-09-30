@@ -11,6 +11,8 @@ export default function Card({ id, name, status, description, url }) {
        
         <p className={styles.status}>{status}</p>
 
+        <p className={styles.album}>Álbum: {albumNames[music.albumId]}</p>
+
        
         {description && <p className={styles.description}>{description}</p>}
 

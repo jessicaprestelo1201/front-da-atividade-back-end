@@ -25,10 +25,18 @@ export default function Home() {
           <div className={styles.avatarGlow}></div>
         </div>
 
+
+<section className={styles.highlight}>
+          <div className={styles.highlightContent}>
+            <p className={styles.highlightText}>
+              <strong>Lana Del Rey - "Born to Die"</strong><br/>
+              A combinação perfeita de melancolia e beleza que tem sido minha trilha sonora constante.
+            </p>
+          </div>
+        </section>
+
     
-        <blockquote className={styles.quote}>
-          As melhores músicas - Lana Del Rey
-        </blockquote>
+        
 
       </main>
     </div>

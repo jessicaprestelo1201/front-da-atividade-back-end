@@ -31,6 +31,7 @@ const allMusics = [
   { id: 28, title: "Hope Is a Dangerous Thing", artist: "Lana Del Rey" },
   { id: 29, title: "Let Me Love You Like a Woman", artist: "Lana Del Rey" },
   { id: 30, title: "Young and Beautiful", artist: "Lana Del Rey" },
+  { id: 31, title: "Blue Banisters", artist: "Lana Del Rey" },
 ];
 
 

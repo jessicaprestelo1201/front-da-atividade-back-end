@@ -75,7 +75,7 @@ const MusicList = () => {
 
               <p className={styles.story}>{music.story}</p>
 
-              <p className={styles.album}>Álbum: #{music.albumId}</p>
+              <p className={styles.album}>Álbum: {music.albumName}</p>
 
              
               <a

@@ -62,7 +62,7 @@ const MusicList = () => {
   return (
     <div className={styles.container}>
       <Header />
-      <h1 className={styles.title}>Músicas da Lana Del Rey</h1>
+      <h1 className={styles.title}>Músicas da Lana Del Reyyyyy</h1>
       <div className={styles.musicGrid}>
         {musics.map((music) => (
           <div key={music.id} className={styles.musicCard}>

@@ -10,30 +10,23 @@ export default function ApiInfo() {
         <h2 className={styles.title}>💋🎟 Informações da API</h2>
 
         <div className={styles.card}>
-          <p><strong>Nome da API:</strong> Studio Ghibli</p>
+          <p><strong>Nome da API:</strong> Lana Del Rey</p>
           <p className={styles.text}>
-            <strong>Documentação:</strong>{" "}
             <a 
               href="http://localhost:5000"
               target="_blank" 
               className={styles.link}
             >
-              Clique aqui
             </a>
           </p>
           <p className={styles.text}><strong>URL Base:</strong> https://localhost:5000</p>
-          <p className={styles.text}><strong>Endpoint usado:</strong> /character</p>
+          <p className={styles.text}><strong>Endpoint usado:</strong> /musics</p>
           <p className={styles.text}><strong>Atributos retornados:</strong> id, name, status, species, image...</p>
           <p className={styles.description}>
-            Essa API disponibiliza informações sobre os personagens, episódios e locais dos desenhos do Studio Ghibli.
+            Essa API disponibiliza informações sobre as músicas do Lana Del Rey, como título, artista, álbum, descrição, URL Spotify, etc.
           </p>
 
           
-          <Link href="/musics/details">
-            <button className={styles.button}>
-              🎵 Ver detalhes da música
-            </button>
-          </Link>
         </div>
       </main>
     </div>
