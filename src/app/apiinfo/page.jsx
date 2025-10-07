@@ -21,7 +21,6 @@ export default function ApiInfo() {
           </p>
           <p className={styles.text}><strong>URL Base:</strong> https://localhost:5000</p>
           <p className={styles.text}><strong>Endpoint usado:</strong> /musics</p>
-          <p className={styles.text}><strong>Atributos retornados:</strong> id, name, status, species, image...</p>
           <p className={styles.description}>
             Essa API disponibiliza informações sobre as músicas do Lana Del Rey, como título, artista, álbum, descrição, URL Spotify, etc.
           </p>

@@ -10,8 +10,8 @@ export default function Home() {
       <main className={styles.main}>
         
         <h2 className={styles.title}>3º Ano - 2TDS2</h2>
-        <p className={styles.subtitle}>Escola: SESI Valinhos</p>
-        <p className={styles.subtitleSpacing}>Aluno(a): Jéssica Prestelo</p>
+        <p className={styles.subtitle}>SESI Valinhos</p>
+        <p className={styles.subtitleSpacing}>Jéssica Prestelo</p>
         
         
         <div className={styles.avatarWrapper}>
@@ -26,14 +26,7 @@ export default function Home() {
         </div>
 
 
-<section className={styles.highlight}>
-          <div className={styles.highlightContent}>
-            <p className={styles.highlightText}>
-              <strong>Lana Del Rey - "Born to Die"</strong><br/>
-              A combinação perfeita de melancolia e beleza que tem sido minha trilha sonora constante.
-            </p>
-          </div>
-        </section>
+
 
     
         
