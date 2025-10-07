@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <h1 className={styles.logo}>Lana Del Rey</h1>
+        <h1 className={styles.logo}>Lana Del  💋</h1>
         <nav className={styles.nav}>
           <Link href="/" className={styles.link}>Home</Link>
           <Link href="/apiinfo" className={styles.link}>API Info</Link>
