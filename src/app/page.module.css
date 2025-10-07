@@ -31,12 +31,14 @@
 .subtitle {
   font-size: 1.25rem; 
   color: #000000; 
+  font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 .subtitleSpacing {
   font-size: 1.25rem; 
   color: #000000;
   margin-bottom: 2rem; 
+  font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 
