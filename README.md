@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Tuturial de como acessar esta atividade
 
-## Getting Started
 
-First, run the development server:
+## 1. Acessar o repositório
 
-```bash
+- Acesse o repositório front do projeto (https://github.com/jessicaprestelo1201/front-da-atividade-back-end)
+
+- Acesse o repositório back do projeto (https://github.com/jessicaprestelo1201/Atividade-Back-end-2025)
+
+
+## 2. Clonar o repositório
+
+Clone os dois repositórios para que possamos acessar os arquivos do front e do back
+
+## 4. Após clonar ambos os repositório, acesse o terminal de ambos e execute o seguinte comando:
+
+npm install
+
+
+## 5. Após executar o comando npm install em ambos os repositórios, acesse o terminal do back e execute o seguinte comando:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 6. Após executar o comando npm run dev em ambos os repositórios, acesse o terminal do front e execute o seguinte comando:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 6. Após isso, ao acessar o localhost:3000 no seu navegador, você deverá ver a página com todas as informações do projeto.
